@@ -6,6 +6,7 @@ var ground
 var box1,box2, box3,box4,box5,ground;
 var pig1,pig2, bird1;
 var log1,log2,log3,log4;
+var platform
 var bgImg
 
 function preload(){
@@ -15,6 +16,7 @@ function preload(){
 
 function setup() {
   createCanvas(1200,400);
+
 
 
   myEngine=Engine.create();
@@ -35,7 +37,7 @@ log3=new Log(760,120,150,PI/7)
 log4=new Log(870,120,150,-PI/7)
 
 bird1=new Bird(100,100)
-  
+  platform= new Ground(150,300,300,170);
 }
 
 function draw() {
@@ -57,4 +59,5 @@ function draw() {
  log4.display();
 
  bird1.display();
+ platform.display();
 }
